@@ -1,0 +1,27 @@
+{% extends "listings/base.html" %}
+
+{% block content %}
+        <h1 class="title">{{title}}</h1>
+        <ul class="annonces">
+            {% for annonce in annonces %}
+            <li class="annonce">
+                <div class="elt"> {{annonce.title}}</div>
+                <div class="elt"> {{annonce.description}}</div>
+
+                <div class="elt"> 
+                    <p>{{annonce.type}}</p>
+                <p>{{annonce.year}}</p>
+                <p >{% if annonce.sold %}
+                <span class="true">Disponible</span>
+                {% else %}
+                <span class="false">Terminé</span>
+                {% endif %} </p>
+            </div>
+                <div class="elt"><a href="{% url 'band-details' annonce.band.id %}" class="button"> Groupe</a></div>
+
+            </li>
+                
+                
+                {% endfor %}
+        </ul>
+        {% endblock content %}

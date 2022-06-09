@@ -1,0 +1,20 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+
+<div class="parentD">
+<div class="childD"> <p class="detailN">name:</p><p class="detailC">{{band.name}}</p></div>
+<div class="childD"><p class="detailN">Année de formation:</p><p class="detailC">{{band.year_formed}}</p></div>
+<div class="childD"><p class="detailN">Genre:</p><p class="detailC">{{band.get_genre_display}}</p></div>
+<div class="childD"><p class="detailN">actif:</p><p class="detailC">{{band.active|yesno}}</p></div>
+
+<div class="childD"><p class="detailN">biography:</p><p class="detailC">{{band.biography}}</p></div>
+{% if band.official_homepage %}
+<div class="childD"><p class="detailN">Page Officielle:</p><p class="detailC">{{band.official_homepage}}</p></div>
+{% endif %}
+<div class="childD"><a class="button" href="{% url 'annonce-listG' forListing band.id %}" >annonces</a></div>
+
+</div>
+
+
+{% endblock  %}

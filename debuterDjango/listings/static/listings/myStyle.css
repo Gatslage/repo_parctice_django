@@ -1,0 +1,137 @@
+*{
+    
+}
+
+.menu_lat{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: rgb(42, 165, 142);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.navTitle{
+    
+    margin-right: 10px;
+    font-weight: 500;
+}
+.navTitle:hover{
+    border:rgb(42, 165, 142) 1px groove ;
+    border-radius: 15px;
+    background-color: rgb(85, 182, 164);
+    padding: 5px;
+}
+.nameApp{
+    font-weight: 500;
+    font-size: x-large;
+}
+.princ{
+    background-color: whitesmoke;
+}
+.title{
+    font-weight: 600;
+    margin-left: 3%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkslategray;
+    font-size: xx-large;
+    text-transform: capitalize;
+    border-bottom:rgb(42, 165, 142) 5px groove ;
+}
+
+.band{
+    border:rgb(42, 165, 142) 1px groove ;
+    border-radius: 15px;
+    background-color: rgb(85, 182, 164);
+    list-style: none;
+    padding: 5px;
+    margin-top: 10px;
+    width: 25%;
+    font-size: larger;
+    text-align: center;
+}
+.band:hover{
+    background-color: rgb(7, 101, 84);
+    font-weight: 900;
+}.annonces{
+    display: flex;
+    flex-wrap: wrap;
+}
+.annonce{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: rgb(7,101,84) 3px groove;
+    border-radius: 10px;
+    background-color: rgb(250, 255, 255);
+    color: black;
+    font-weight: 400;
+    flex-wrap: wrap;
+    padding: 2%;
+    box-shadow: white 10px;
+    margin: 0.3%;
+}
+.elt{
+    width: 90%;
+}
+.elt:nth-child(1){
+    color: rgb(7,101,84);
+    padding-right: 10%;
+    font-size: x-large;
+    font-weight: 700;
+}
+.elt:nth-child(2){
+    color: rgb(87, 85, 85);
+    padding-right: 10%;
+    font-weight: 600;
+}
+.elt:nth-child(3){
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+.true{
+    color:green;
+}
+.false{
+    color: red;
+}
+.button{
+    text-align: center;
+    border:rgb(42, 165, 142) 1px groove ;
+    border-radius: 15px;
+    background-color: rgb(85, 182, 164);
+    padding: 5px;
+}
+.parentD{
+    margin-top:2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: larger;
+
+}
+.childD{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+.detailN{
+    color:rgb(7, 101, 84);
+    border-bottom: orange 2px groove;
+}
+.detailC{
+    color: rgb(87, 85, 85);
+    padding-right: 10%;
+    font-weight: 600;
+}
