@@ -1,7 +1,7 @@
 {% extends "listings/base.html" %}
 
 {% block content %}
-        <h1 class="title">{{title}}</h1>
+        <h1 class="title">{{title}}<a class="Cbutton" href="{% url 'annonce-create' %}"> + </a></h1>
         <ul class="annonces">
             {% for annonce in annonces %}
             <li class="annonce">
@@ -17,8 +17,8 @@
                 <span class="false">Terminé</span>
                 {% endif %} </p>
             </div>
-                <div class="elt"><a href="{% url 'band-details' annonce.band.id %}" class="button"> Groupe</a></div>
-
+                <div class="elt"><a href="{% url 'band-details' annonce.band.id %}" class="button"> Groupe</a><a class="Cbutton" href="{% url 'annonce-update' annonce.id%}"> Modifier </a><a class="butNegatif" href="{% url 'annonce-del' annonce.id %}">supprimer</a></div>
+                
             </li>
                 
                 

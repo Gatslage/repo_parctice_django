@@ -1,11 +1,12 @@
 {% extends 'listings/base.html' %}
 
 {% block content %}
-    <h1 class="title">Nos differents groupes</h1>
-    <ul>
+    <h1 class="title">Nos differents groupes <a class="Cbutton" href="{% url 'band-create' %}"> + </a></h1>
+    <ul class="bands">
      {% for band in bands %}
-    <li class="band"><a href="{% url 'band-details' band.id%}"> {{band.name}}</a>
-    
+    <li class="band"><a href="{% url 'band-details' band.id%}"> {{band.name}}
+    </a></li>
+    <div><a class="Cbutton" href="{% url 'band-update' band.id%}"> Modifier </a>  <a class="butNegatif" href="{% url 'band-del' band.id %}">supprimer</a>  </div>
     {% endfor %}
     </ul>
 {% endblock  %}

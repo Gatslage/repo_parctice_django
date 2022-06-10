@@ -1,0 +1,23 @@
+{% extends "listings/base.html" %}
+
+{% block content %}
+
+<h1 class="detailN">Êtes vous sûr ?</h1>
+<h2 class="detailC">Voulez-vous vraiment supprimer {{name}} 
+   {% if object.title %}
+   {{object.title}}
+   {% else %}
+   {{object.name}}
+   {% endif %}?
+</h2>
+<form action='' method='post'>
+<div class="menu">
+    {% csrf_token %}
+    <input type='submit' value="oui, je suis sûr" class="butNegatif">
+    <a class="butNeutre" href="{% url precedente  %}">Non revenir à la page précedente</a>
+
+
+</div>
+</form>
+
+{% endblock content %}

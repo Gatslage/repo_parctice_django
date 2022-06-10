@@ -26,5 +26,11 @@ urlpatterns = [
     path('receive/',views.receive,name='receive'),
     path('about-us/',views.aboutUs,name='about-us'),
     path('annonce_list/',views.annonce,name='annonce-list'),
-    path('annonce_list/<slug:title>/<int:idBand>/',views.annonce,name='annonce-listG')
+    path('annonce_list/<slug:title>/<int:idBand>/',views.annonce,name='annonce-listG'),
+    path('bands/add/',views.band_up,name='band-create'),
+    path('bands/upd/<int:id>/',views.band_up,name='band-update'),
+    path('annonces/add/',views.annonce_up,name='annonce-create'),
+    path('annonces/upd/<int:id>/',views.annonce_up,name='annonce-update'),
+    path('band/<int:id>/delete/',views.band_del,name='band-del'),
+    path('annonce/<int:id>/delete/',views.annonce_del,name='annonce-del')
 ]
